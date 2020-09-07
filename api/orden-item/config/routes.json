@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/orden-items",
+      "handler": "orden-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orden-items/count",
+      "handler": "orden-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orden-items/:id",
+      "handler": "orden-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orden-items",
+      "handler": "orden-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orden-items/:id",
+      "handler": "orden-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/orden-items/:id",
+      "handler": "orden-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

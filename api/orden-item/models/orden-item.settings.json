@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orden_items",
+  "info": {
+    "name": "orden item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "producto": {
+      "model": "producto"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "aceptado": {
+      "type": "boolean"
+    },
+    "orden": {
+      "via": "subordenes",
+      "model": "orden"
+    }
+  }
+}

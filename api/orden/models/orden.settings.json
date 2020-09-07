@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordens",
+  "info": {
+    "name": "orden"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fecha": {
+      "type": "datetime"
+    },
+    "costoTotal": {
+      "type": "decimal"
+    },
+    "tipoFacturacion": {
+      "type": "enumeration",
+      "enum": [
+        "BOLETA",
+        "FACTURA"
+      ]
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "PENDIENTE",
+        "ACEPTADO",
+        "PENDIENTE_DE_PAGO",
+        "PAGADO",
+        "EN_ENVIO",
+        "POR_RECOJER",
+        "CANCELADO",
+        "RECHAZADO",
+        "FINALIZADO"
+      ]
+    },
+    "comprador": {
+      "model": "perfil"
+    },
+    "subordenes": {
+      "collection": "orden-item",
+      "via": "orden"
+    },
+    "costoEnvio": {
+      "type": "decimal"
+    },
+    "tipoEnvio": {
+      "type": "enumeration",
+      "enum": [
+        "RECOJO",
+        "DELIVERY"
+      ]
+    }
+  }
+}

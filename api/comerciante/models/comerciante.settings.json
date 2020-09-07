@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comerciantes",
+  "info": {
+    "name": "comerciante"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombres": {
+      "type": "string"
+    },
+    "apellidos": {
+      "type": "string"
+    },
+    "correo": {
+      "type": "email"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "comerciante"
+    },
+    "locales": {
+      "collection": "local-comercial",
+      "via": "comerciante"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "foto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

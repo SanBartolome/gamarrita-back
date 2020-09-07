@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/comerciantes",
+      "handler": "comerciante.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/comerciantes/count",
+      "handler": "comerciante.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/comerciantes/:id",
+      "handler": "comerciante.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/comerciantes",
+      "handler": "comerciante.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/comerciantes/:id",
+      "handler": "comerciante.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/comerciantes/:id",
+      "handler": "comerciante.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
